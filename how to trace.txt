@@ -1,0 +1,45 @@
+for more detalied tracing :::::
+
+for example 1 SC:
+get following signals
+PC from DUT>datapath
+wr from DUT>datapath>RF
+wd from DUT>datapath>RF
+
+
+for example 2 SC:
+get following signals
+PC from DUT>datapath
+wr from DUT>datapath>RF
+wd from DUT>datapath>RF
+d1 from DUT>datapath>jumpmux
+s  from DUT>datapath>jumpmux
+y  from DUT>datapath>jumpmux
+
+
+
+for example 3 SC:
+get following signals
+PC from DUT>datapath
+wr from DUT>datapath>RF
+wd from DUT>datapath>RF
+din from DUT>dmem
+dout from DUT>dmem
+
+
+for example 1 PP:
+get following signals
+ALL signals under DUT "to assure cycle fllows"
+
+
+
+
+
+
+
+
+
+
+for overview get all DUT signal
+
+
