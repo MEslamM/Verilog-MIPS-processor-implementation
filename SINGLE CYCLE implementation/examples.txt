@@ -1,0 +1,49 @@
+addi $4,$0,27			//4 has 27 
+xori $5,$4,5			//5 has 30 
+add $6,$4,$5			//6 has 57 
+sub $7,$5,$4			//7 has 3
+slt $8,$7,$6			//8 has 1
+or $9,$7,$0			//9 has 3
+and $10,$7,$0			//10 has 0
+sll $11,$7,1			//11 has 6
+srl $12,$7,1			//12 has 1
+
+2004001b
+38850005
+00853020
+00a43822
+00e6402a
+00e04825
+00e05024
+00075840
+00076042
+
+///////////////////////////////////
+
+       addi $5,$0,3
+start: addi $6, $6,1 
+       bne $5,$6,start
+       j 20                      //JUMPS TO 14hex
+
+20050003
+20c60001
+14a6fffe
+08000005
+
+/////////////////////////////////////
+
+addi $5,$0,3			// 5 has 3
+beq $0, $0, next		// true
+add $6, $5, $0			// never reached
+next: sw $5,4($5)		// sw from reg5 in memory stores 3
+lw $7, 4($5)			// lw from memory to reg 7 load 3
+
+20050003
+10000001
+00a03020
+aca50004
+8ca70004
+
+
+
+take machine code of assembly instructions needed to be tested and paste it in "memfile"
